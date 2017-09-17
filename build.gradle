@@ -1,0 +1,10 @@
+apply plugin: 'scala'
+apply plugin: 'eclipse'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile 'org.jsoup:jsoup:1.8.1'
+}

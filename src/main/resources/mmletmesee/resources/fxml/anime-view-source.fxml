@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.*?>
+
+<GridPane id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="1093.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mmletmesee.animeclient.default_.DefaultAnimeController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="338.0" minWidth="5.0" prefWidth="15.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="494.0" minWidth="10.0" prefWidth="200.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="619.0" minWidth="10.0" prefWidth="212.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="709.0" minWidth="10.0" prefWidth="664.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="164.0" minHeight="0.0" prefHeight="15.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="469.0" minHeight="10.0" prefHeight="428.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="59.0" minHeight="1.0" prefHeight="13.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ListView id="titleList" onMouseClicked="#onTitleSelected" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <ListView id="episodeList" onMouseClicked="#onEpisodeSelected" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <StackPane id="mediaPane" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <children>
+            <ImageView id="coverPane" fitHeight="380.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" />
+            <BorderPane id="playerPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
+			   <center>
+			      <MediaView id="playerView" fitHeight="300.0" fitWidth="380.0" BorderPane.alignment="CENTER" />
+			   </center>
+			   <bottom>
+			      <Slider id="slider" scaleX="0.9" translateY="-20.0" BorderPane.alignment="CENTER" />
+			   </bottom>
+			   <left>
+			      <Polygon id="playButton" fill="#d0baba" onMouseClicked="#onPlayButtonClick" rotate="90.0" scaleY="0.8" stroke="TRANSPARENT" strokeType="INSIDE" BorderPane.alignment="CENTER">
+			        <points>
+			          <Double fx:value="-50.0" />
+			          <Double fx:value="40.0" />
+			          <Double fx:value="50.0" />
+			          <Double fx:value="40.0" />
+			          <Double fx:value="0.0" />
+			          <Double fx:value="-60.0" />
+			        </points>
+			      </Polygon>
+			   </left>
+			   <right>
+			      <Rectangle id="stopButton" arcHeight="5.0" arcWidth="5.0" fill="#cecfd0" height="80.0" onMouseClicked="#onStopButtonClick" scaleX="0.8" stroke="#00000001" strokeType="INSIDE" width="100.0" BorderPane.alignment="CENTER" />
+			   </right>
+			</BorderPane>
+         </children>
+      </StackPane>
+   </children>
+</GridPane>
